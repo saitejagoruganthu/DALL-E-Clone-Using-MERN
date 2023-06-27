@@ -22,12 +22,9 @@ const CreatePost = () => {
                 setGeneratingImg(true);
                 const response = await fetch('https://dall-e-backend-sqbz.onrender.com/api/v1/dalle',{
                     method: 'POST',
-                     mode: 'cors',
+                    mode: 'cors',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'POST, PUT, DELETE, GET, OPTIONS',
-                        'Access-Control-Allow-Headers': '*'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({prompt: form.prompt})
                 })
@@ -61,10 +58,7 @@ const CreatePost = () => {
                     method: 'POST',
                      mode: 'cors',
                     headers:{
-                        'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'POST, PUT, DELETE, GET, OPTIONS',
-                        'Access-Control-Allow-Headers': '*'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(form)
                 })
