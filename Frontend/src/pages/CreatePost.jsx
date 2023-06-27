@@ -22,6 +22,7 @@ const CreatePost = () => {
                 setGeneratingImg(true);
                 const response = await fetch('https://dall-e-backend-sqbz.onrender.com/api/v1/dalle',{
                     method: 'POST',
+                    mode: "cors",
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -55,6 +56,7 @@ const CreatePost = () => {
             try {
                 const response = await fetch('https://dall-e-backend-sqbz.onrender.com/api/v1/post', {
                     method: 'POST',
+                    mode: "cors",
                     headers:{
                         'Content-Type': 'application/json'
                     },
